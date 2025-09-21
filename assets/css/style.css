@@ -429,7 +429,7 @@ p {
     }
 
     .hero {
-        padding: 4rem 0 2rem;
+        padding: 2rem 0 1rem;
     }
 
     .hero-buttons {
@@ -446,7 +446,11 @@ p {
     }
 
     .section {
-        padding: 1.5rem 0;
+        padding: 1rem 0;
+    }
+
+    .container {
+        padding: 0 0.75rem;
     }
 }
 
