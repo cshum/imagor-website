@@ -227,7 +227,6 @@ p {
 
 .hero p {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
     color: hsl(var(--muted-foreground));
 }
 
@@ -838,10 +837,6 @@ p {
     font-size: 0.875rem;
     margin: 1rem 0;
     word-break: break-all;
-}
-
-.back-home {
-    margin-top: 3rem;
 }
 
 /* Success page mobile optimizations */
