@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagor Studio</title>
+    <meta name="description" content="Self-hosted image gallery and live editing for creators and professionals.">
+    <meta name="keywords" content="image gallery, self-hosted, live editing, imagor studio, image processing, virtual scrolling, web app">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Imagor Studio - Self-hosted Image Gallery and Live Edit Web App">
+    <meta property="og:description" content="Self-hosted image gallery and live editing for creators and professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imagor.net">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Imagor Studio - Self-hosted Image Gallery">
+    <meta name="twitter:description" content="Self-hosted image gallery and live editing for creators and professionals.">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖼️</text></svg>">
+
+    <!-- Lucide Icons -->
+    <script src="assets/js/lucide.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Imagor Studio</a>
+                <nav class="nav">
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="https://github.com/cshum/imagor-studio" class="nav-link">GitHub</a>
+                    <a href="buy/early-bird/" class="btn btn-accent">Early Bird $39</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Imagor Studio</h1>
+                <p class="text-large">Self-hosted image gallery and live editing for creators and professionals</p>
+                <div style="max-width: 600px; margin: 0 auto 2rem;">
+                    <ul style="text-align: left; list-style: none; padding: 0;">
+                        <li style="margin: 0.75rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i data-lucide="palette" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px;"></i>
+                            <span>Professional image editing with real-time preview</span>
+                        </li>
+                        <li style="margin: 0.75rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i data-lucide="zap" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px;"></i>
+                            <span>Lightning-fast gallery with virtual scrolling</span>
+                        </li>
+                        <li style="margin: 0.75rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i data-lucide="settings" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px;"></i>
+                            <span>Zero setup - just point to your images and start creating</span>
+                        </li>
+                        <li style="margin: 0.75rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i data-lucide="shield-check" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px;"></i>
+                            <span>Non-destructive editing - your originals stay safe</span>
+                        </li>
+                        <li style="margin: 0.75rem 0; display: flex; align-items: center; gap: 0.75rem;">
+                            <i data-lucide="users" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px;"></i>
+                            <span>Perfect for photographers, designers, and content creators</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero-buttons">
+                    <a href="buy/early-bird/" class="btn btn-accent btn-large">Support Development - $39</a>
+                    <a href="https://github.com/cshum/imagor-studio" class="btn btn-secondary btn-large">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Slideshow -->
+    <section class="section" style="background: hsl(var(--muted) / 0.3); padding: 2rem 0;">
+        <div class="container">
+            <div class="slideshow-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <!-- Left Arrow -->
+                <button class="slideshow-arrow slideshow-arrow-left" data-direction="prev">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+
+                <!-- Slideshow Container -->
+                <div class="slideshow-container" style="flex: 1; max-width: 1000px; position: relative; overflow: hidden;">
+                    <!-- Slide Track -->
+                    <div class="slideshow-track">
+                        <!-- Clone of last slide (for infinite loop) -->
+                        <div class="slide slide-clone" data-slide="2">
+                            <div style="text-align: center; margin-bottom: 1.5rem;">
+                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Mobile Experience</h3>
+                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Touch-optimized interface that works seamlessly on mobile while maintaining desktop power and full functionality.</p>
+                            </div>
+                            <div class="screenshot-container" style="max-width: 400px; margin: 0 auto;">
+                                <img src="assets/images/gallery-mobile.jpg" alt="Imagor Studio Mobile Interface">
+                            </div>
+                        </div>
+
+                        <!-- Slide 1 -->
+                        <div class="slide" data-slide="0">
+                            <div style="text-align: center; margin-bottom: 1.5rem;">
+                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Lightning-Fast Gallery</h3>
+                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">High-performance virtual scrolling gallery with instant thumbnail generation and smooth navigation through thousands of images.</p>
+                            </div>
+                            <div class="screenshot-container">
+                                <img src="assets/images/gallery.jpg" alt="Imagor Studio Gallery Interface">
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slide" data-slide="1">
+                            <div style="text-align: center; margin-bottom: 1.5rem;">
+                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Professional Live Editing</h3>
+                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Advanced image editing with real-time preview, color adjustments, effects, cropping, and instant URL generation for transformed images.</p>
+                            </div>
+                            <div class="screenshot-container">
+                                <img src="assets/images/editor.jpg" alt="Imagor Studio Live Editor Interface">
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide" data-slide="2">
+                            <div style="text-align: center; margin-bottom: 1.5rem;">
+                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Mobile Experience</h3>
+                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Touch-optimized interface that works seamlessly on mobile while maintaining desktop power and full functionality.</p>
+                            </div>
+                            <div class="screenshot-container" style="max-width: 400px; margin: 0 auto;">
+                                <img src="assets/images/gallery-mobile.jpg" alt="Imagor Studio Mobile Interface">
+                            </div>
+                        </div>
+
+                        <!-- Clone of first slide (for infinite loop) -->
+                        <div class="slide slide-clone" data-slide="0">
+                            <div style="text-align: center; margin-bottom: 1.5rem;">
+                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Lightning-Fast Gallery</h3>
+                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">High-performance virtual scrolling gallery with instant thumbnail generation and smooth navigation through thousands of images.</p>
+                            </div>
+                            <div class="screenshot-container">
+                                <img src="assets/images/gallery.jpg" alt="Imagor Studio Gallery Interface">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation dots -->
+                    <div class="slideshow-dots-wrapper" style="text-align: center; margin-top: 2rem;">
+                        <button class="mobile-arrow mobile-arrow-left" data-direction="prev">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="slideshow-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                        <button class="mobile-arrow mobile-arrow-right" data-direction="next">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Arrow -->
+                <button class="slideshow-arrow slideshow-arrow-right" data-direction="next">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Suite Section -->
+    <section id="products" class="products section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>A Complete Image Processing Ecosystem</h2>
+            </div>
+
+            <div class="products-grid">
+                <!-- Imagor Studio -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i data-lucide="image" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3>Imagor Studio</h3>
+                    <p>Self-hosted image gallery and live editing for creators and professionals.</p>
+                    <div class="product-links">
+                        <a href="https://github.com/cshum/imagor-studio" class="product-link">
+                            <i data-lucide="github" style="width: 16px; height: 16px;"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- imagor -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i data-lucide="server" style="color: white; width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3>imagor</h3>
+                    <p>Fast, secure image processing server and Go library, using libvips</p>
+                    <div class="product-links">
+                        <a href="https://github.com/cshum/imagor" class="product-link">
+                            <i data-lucide="github" style="width: 16px; height: 16px;"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- vipsgen -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i data-lucide="code-2" style="color: white; width: 24px; height: 24px;"></i>
+                    </div>
+                    <h3>vipsgen</h3>
+                    <p>Type-safe, comprehensive Go binding generator for libvips</p>
+                    <div class="product-links">
+                        <a href="https://github.com/cshum/vipsgen" class="product-link">
+                            <i data-lucide="github" style="width: 16px; height: 16px;"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2>Imagor Studio</h2>
+                <p class="text-large">Built from the ground up for performance, simplicity, and professional workflows</p>
+                <p style="max-width: 700px; margin: 1rem auto 0; color: hsl(var(--muted-foreground));">Built on a foundation from vipsgen to imagor. Imagor Studio brings together years of ongoing development into a Self-hosted image gallery and live editing for creators and professionals. Your support enables continued development of Imagor Studio.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="gauge" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h4>High-Performance Virtual Scrolling</h4>
+                    <p>Lightning-fast gallery with virtual scrolling and 4-8x faster image processing than ImageMagick with libvips streaming architecture.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="edit" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h4>Live Image Editing</h4>
+                    <p>Powerful live image editing with instant URL generation. Transform images on-the-fly without modifying originals.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="plug-zap" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h4>Zero-Configuration Setup</h4>
+                    <p>No indexing or sync required. Just point to your storage and start browsing. Universal storage support for file systems and S3-compatible solutions.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="shield" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h4>Non-Destructive Workflow</h4>
+                    <p>Keep your original files untouched. All transformations are applied dynamically, preserving your source images.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h4>Professional-Grade Processing</h4>
+                    <p>Powered by imagor's robust image processing engine with comprehensive format support and advanced optimization.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i data-lucide="smartphone" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <h4>Modern Interface</h4>
+                    <p>Slick, responsive interface with intuitive navigation, EXIF data display, and seamless user experience across devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Imagor. Built with ❤️ for creators and professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
