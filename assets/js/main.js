@@ -363,16 +363,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     };
 
-    // Add loading states to external links
-    document.querySelectorAll('a[href^="https://github.com"]').forEach(link => {
-        link.addEventListener('click', function() {
-            const originalText = this.textContent;
-            this.textContent = 'Opening...';
-            setTimeout(() => {
-                this.textContent = originalText;
-            }, 2000);
-        });
-    });
 
     // Lazy loading for images (when added)
     const lazyImages = document.querySelectorAll('img[data-src]');
