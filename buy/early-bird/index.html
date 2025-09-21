@@ -27,7 +27,7 @@
             background: white;
             border-radius: 1rem;
             padding: 2rem;
-            box-shadow: var(--shadow-xl);
+            box-shadow: 0 25px 50px -12px hsl(var(--foreground) / 0.25);
             border: 2px solid hsl(var(--border));
             position: relative;
             max-width: 500px;
@@ -137,7 +137,7 @@
         }
 
         .business-info {
-            background: var(--bg-secondary);
+            background: hsl(var(--muted) / 0.3);
             padding: 2rem;
             border-radius: 1rem;
             margin: 2rem 0;
@@ -150,8 +150,8 @@
         }
 
         .spinner {
-            border: 3px solid var(--border-color);
-            border-top: 3px solid var(--primary-color);
+            border: 3px solid hsl(var(--border));
+            border-top: 3px solid hsl(var(--primary));
             border-radius: 50%;
             width: 30px;
             height: 30px;
@@ -274,8 +274,8 @@
     </footer>
 
     <script>
-        // Stripe configuration
-        const stripe = Stripe('pk_test_51234567890abcdef'); // Replace with your actual publishable key
+        // Live Stripe configuration
+        const stripe = Stripe('pk_live_51NbJGSI7Zk0Hr1ABJnZraWWM9o49CtBzqzaDmf8wWB9iaoKImnUTKaLjB5hGaXGUKIuCs5xOMx4qJEQZ6b8e0OOt00t2VLlDJv');
 
         document.getElementById('checkout-button').addEventListener('click', async () => {
             const button = document.getElementById('checkout-button');
@@ -286,37 +286,26 @@
             loading.style.display = 'block';
 
             try {
-                // In production, replace this URL with your actual Stripe checkout session endpoint
-                const response = await fetch('/create-checkout-session', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        product: 'imagor-studio-early-bird',
-                        price: 3900, // $39.00 in cents
-                    }),
-                });
-
-                const session = await response.json();
-
-                // Redirect to Stripe Checkout
+                // Direct Stripe Checkout with your product
                 const result = await stripe.redirectToCheckout({
-                    sessionId: session.id,
+                    lineItems: [{
+                        price: 'price_1S9nSBI7Zk0Hr1ABfsjqDZpm', // $39 Imagor Studio Early Bird Supporter
+                        quantity: 1,
+                    }],
+                    mode: 'payment',
+                    successUrl: 'https://imagor.net/success?session_id={CHECKOUT_SESSION_ID}',
+                    cancelUrl: 'https://imagor.net/buy/early-bird/',
                 });
 
                 if (result.error) {
                     console.error('Stripe error:', result.error);
-                    alert('Payment failed. Please try again.');
+                    alert('Payment failed: ' + result.error.message + '. Please try again.');
                     button.style.display = 'block';
                     loading.style.display = 'none';
                 }
             } catch (error) {
                 console.error('Error:', error);
-
-                // For demo purposes, show a message about setting up Stripe
-                alert('Stripe integration not yet configured. Please set up your Stripe account and webhook endpoints to enable payments.');
-
+                alert('Payment system error. Please try again or contact support.');
                 button.style.display = 'block';
                 loading.style.display = 'none';
             }
