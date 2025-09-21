@@ -293,16 +293,6 @@ document.addEventListener('DOMContentLoaded', function() {
         statsObserver.observe(el);
     });
 
-    // Product card hover effects (removed translateY, kept scale)
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
 
     // Button hover effects (removed translateY, kept shadow)
     document.querySelectorAll('.btn').forEach(btn => {
