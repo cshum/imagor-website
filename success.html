@@ -85,12 +85,37 @@
 
         .session-id {
             font-family: monospace;
-            background: hsl(var(--muted));
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            border: 1px solid hsl(var(--border));
             padding: 0.5rem 1rem;
             border-radius: var(--radius);
             font-size: 0.875rem;
             margin: 1rem 0;
             word-break: break-all;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 0 2rem !important;
+            }
+
+            .success-container {
+                padding: 1rem;
+            }
+
+            .success-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .next-steps {
+                padding: 1.5rem;
+            }
+
+            .support-info {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>

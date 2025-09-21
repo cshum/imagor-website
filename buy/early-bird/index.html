@@ -163,6 +163,62 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Mobile menu styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: hsl(var(--foreground));
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: hsl(var(--background));
+                padding: 1rem;
+                box-shadow: 0 2px 10px hsl(var(--foreground) / 0.1);
+                border-top: 1px solid hsl(var(--border));
+                z-index: 1000;
+            }
+
+            .nav.mobile-open .nav-link {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid hsl(var(--border));
+            }
+
+            .nav.mobile-open .nav-link:last-child {
+                border-bottom: none;
+            }
+
+            .hero {
+                padding: 4rem 0 2rem !important;
+            }
+
+            .pricing-card {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .section {
+                padding: 2rem 0 !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -176,6 +232,9 @@
                     <a href="../../#features" class="nav-link">Features</a>
                     <a href="https://github.com/cshum/imagor-studio" class="nav-link">GitHub</a>
                 </nav>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -323,6 +382,22 @@
                     });
                 }
             });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('mobile-open');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.querySelector('.nav');
+            const toggle = document.getElementById('mobile-menu-toggle');
+
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('mobile-open');
+            }
         });
 
         // Initialize Lucide icons
