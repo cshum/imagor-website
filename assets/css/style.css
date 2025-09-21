@@ -420,7 +420,7 @@ p {
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     h2 {
@@ -428,12 +428,43 @@ p {
     }
 
     .hero {
-        padding: 2rem 0 1rem;
+        padding: 3rem 0 2rem;
+    }
+
+    .hero-content {
+        padding: 0 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero .text-large {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero ul {
+        margin: 0 0 2rem 0 !important;
+        padding: 0 1rem !important;
+    }
+
+    .hero li {
+        margin: 0.5rem 0 !important;
+        font-size: 0.9rem;
+    }
+
+    .hero li i {
+        width: 18px !important;
+        height: 18px !important;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 0.75rem;
     }
 
     .nav {
@@ -449,7 +480,7 @@ p {
     }
 
     .container {
-        padding: 0 0.75rem;
+        padding: 0 1.5rem;
     }
 }
 
