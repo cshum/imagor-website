@@ -13,111 +13,6 @@
     <!-- Lucide Icons -->
     <script src="assets/js/lucide.js"></script>
 
-    <style>
-        .success-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            color: white;
-        }
-
-        .success-card {
-            background: hsl(var(--card));
-            border: 1px solid hsl(var(--border));
-            border-radius: calc(var(--radius) + 4px);
-            padding: 3rem 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 25px hsl(var(--foreground) / 0.1);
-        }
-
-        .next-steps {
-            background: hsl(var(--muted) / 0.3);
-            border-radius: calc(var(--radius) + 2px);
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: left;
-        }
-
-        .step-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin: 1rem 0;
-            padding: 1rem;
-            background: hsl(var(--background));
-            border-radius: var(--radius);
-            border: 1px solid hsl(var(--border));
-        }
-
-        .step-number {
-            background: hsl(var(--primary));
-            color: hsl(var(--primary-foreground));
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.875rem;
-            font-weight: 600;
-            flex-shrink: 0;
-        }
-
-        .support-info {
-            background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary) / 0.8) 100%);
-            color: hsl(var(--primary-foreground));
-            padding: 2rem;
-            border-radius: calc(var(--radius) + 2px);
-            margin: 2rem 0;
-        }
-
-        .session-id {
-            font-family: monospace;
-            background: hsl(var(--background));
-            color: hsl(var(--foreground));
-            border: 1px solid hsl(var(--border));
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius);
-            font-size: 0.875rem;
-            margin: 1rem 0;
-            word-break: break-all;
-        }
-
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 2rem 0 1rem !important;
-            }
-
-            .success-container {
-                padding: 0.75rem;
-            }
-
-            .success-card {
-                padding: 1.5rem 1rem;
-            }
-
-            .next-steps {
-                padding: 1rem;
-            }
-
-            .support-info {
-                padding: 1rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -143,13 +38,13 @@
                 </div>
 
                 <div class="success-card">
-                    <h1 style="color: hsl(var(--foreground)); margin-bottom: 1rem;">Payment Successful!</h1>
-                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem; color: hsl(var(--muted-foreground));">
+                    <h1>Payment Successful!</h1>
+                    <p>
                         Thank you for supporting Imagor Studio development! Your early bird supporter license is being processed.
                     </p>
 
-                    <div id="session-info" style="display: none;">
-                        <p style="font-size: 0.875rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.5rem;">
+                    <div id="session-info" class="session-info">
+                        <p>
                             Payment Reference:
                         </p>
                         <div id="session-id" class="session-id"></div>
@@ -157,13 +52,13 @@
                 </div>
 
                 <div class="next-steps">
-                    <h3 style="margin-bottom: 1.5rem; color: hsl(var(--foreground));">What happens next?</h3>
+                    <h3>What happens next?</h3>
 
                     <div class="step-item">
                         <div class="step-number">1</div>
                         <div>
-                            <h4 style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">License Key Delivery</h4>
-                            <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">
+                            <h4>License Key Delivery</h4>
+                            <p>
                                 You'll receive your license key via email within 24 hours. Check your spam folder if you don't see it.
                             </p>
                         </div>
@@ -172,8 +67,8 @@
                     <div class="step-item">
                         <div class="step-number">2</div>
                         <div>
-                            <h4 style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">Download Imagor Studio</h4>
-                            <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">
+                            <h4>Download Imagor Studio</h4>
+                            <p>
                                 Get the latest version from our GitHub repository and follow the setup instructions.
                             </p>
                         </div>
@@ -182,8 +77,8 @@
                     <div class="step-item">
                         <div class="step-number">3</div>
                         <div>
-                            <h4 style="margin-bottom: 0.5rem; color: hsl(var(--foreground));">Activate Your License</h4>
-                            <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">
+                            <h4>Activate Your License</h4>
+                            <p>
                                 Enter your license key in Imagor Studio to remove unregistered indicators and show your supporter status.
                             </p>
                         </div>
@@ -191,23 +86,23 @@
                 </div>
 
                 <div class="support-info">
-                    <h3 style="margin-bottom: 1rem;">Need Help?</h3>
-                    <p style="margin-bottom: 1rem;">
+                    <h3>Need Help?</h3>
+                    <p>
                         If you have any questions or need assistance with your license, feel free to reach out:
                     </p>
-                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a href="https://github.com/cshum/imagor-studio/issues" class="btn btn-secondary" style="color: hsl(var(--primary-foreground)); border-color: hsl(var(--primary-foreground) / 0.8); background: hsl(var(--primary-foreground) / 0.1);">
+                    <div class="support-buttons">
+                        <a href="https://github.com/cshum/imagor-studio/issues" class="btn btn-secondary">
                             <i data-lucide="github" style="width: 16px; height: 16px; margin-right: 0.5rem;"></i>
                             GitHub Issues
                         </a>
-                        <a href="https://github.com/cshum/imagor-studio/discussions" class="btn btn-secondary" style="color: hsl(var(--primary-foreground)); border-color: hsl(var(--primary-foreground) / 0.8); background: hsl(var(--primary-foreground) / 0.1);">
+                        <a href="https://github.com/cshum/imagor-studio/discussions" class="btn btn-secondary">
                             <i data-lucide="message-circle" style="width: 16px; height: 16px; margin-right: 0.5rem;"></i>
                             Discussions
                         </a>
                     </div>
                 </div>
 
-                <div style="margin-top: 3rem;">
+                <div class="back-home">
                     <a href="/" class="btn btn-primary btn-large">
                         <i data-lucide="home" style="width: 20px; height: 20px; margin-right: 0.5rem;"></i>
                         Back to Home
@@ -221,7 +116,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2025 Imagor. Built with ❤️ for creators and professionals.</p>
+                <p>&copy; 2025 Imagor Studio. Built with ❤️ for creators and professionals.</p>
             </div>
         </div>
     </footer>
