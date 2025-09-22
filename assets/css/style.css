@@ -35,6 +35,9 @@ body {
     color: hsl(var(--foreground));
     background-color: hsl(var(--background));
     font-feature-settings: "rlig" 1, "calt" 1;
+    /* Prevent iOS Safari zoom */
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
 }
 
 /* Typography */
@@ -143,7 +146,10 @@ p {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
-    font-size: 0.875rem;
+    font-size: 1rem; /* Increased from 0.875rem to prevent iOS zoom */
+    /* Prevent iOS Safari zoom */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .nav-link:hover {
@@ -162,8 +168,11 @@ p {
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 0.875rem;
+    font-size: 1rem; /* Increased from 0.875rem to prevent iOS zoom */
     white-space: nowrap;
+    /* Prevent iOS Safari zoom */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn-primary {
@@ -295,8 +304,11 @@ p {
     color: hsl(var(--muted-foreground));
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 1rem; /* Increased from 0.875rem to prevent iOS zoom */
     transition: color 0.2s ease;
+    /* Prevent iOS Safari zoom */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .product-link:hover {
@@ -543,6 +555,9 @@ p {
     color: hsl(var(--foreground));
     backdrop-filter: blur(10px);
     flex-shrink: 0;
+    /* Prevent iOS Safari zoom */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .slideshow-arrow:hover {
@@ -572,6 +587,9 @@ p {
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    /* Prevent iOS Safari zoom */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .dot:hover {
@@ -597,6 +615,9 @@ p {
     color: hsl(var(--foreground));
     backdrop-filter: blur(10px);
     flex-shrink: 0;
+    /* Prevent iOS Safari zoom */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 @media (max-width: 768px) {
