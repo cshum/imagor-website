@@ -674,6 +674,13 @@ p {
     }
 }
 
+/* Scroll offset for fixed header */
+#quick-start,
+#products,
+#features {
+    scroll-margin-top: 75px;
+}
+
 /* Utilities */
 .mb-4 {
     margin-bottom: 2rem;
