@@ -523,6 +523,7 @@ p {
 }
 
 .slide {
+    padding: 1rem;
     flex: 0 0 100%;
     opacity: 1;
     text-align: center;

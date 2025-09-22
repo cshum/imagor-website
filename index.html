@@ -90,94 +90,92 @@
 
     <!-- Screenshots Slideshow -->
     <section class="section" style="background: hsl(var(--muted) / 0.3); padding: 2rem 0;">
-        <div class="container">
-            <div class="slideshow-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
-                <!-- Left Arrow -->
-                <button class="slideshow-arrow slideshow-arrow-left" data-direction="prev">
-                    <i data-lucide="chevron-left"></i>
-                </button>
+        <div class="slideshow-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
+            <!-- Left Arrow -->
+            <button class="slideshow-arrow slideshow-arrow-left" data-direction="prev">
+                <i data-lucide="chevron-left"></i>
+            </button>
 
-                <!-- Slideshow Container -->
-                <div class="slideshow-container" style="flex: 1; max-width: 1000px; position: relative; overflow: hidden;">
-                    <!-- Slide Track -->
-                    <div class="slideshow-track">
-                        <!-- Clone of last slide (for infinite loop) -->
-                        <div class="slide slide-clone" data-slide="2">
-                            <div style="text-align: center; margin-bottom: 1.5rem;">
-                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Mobile Experience</h3>
-                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Touch-optimized interface that works seamlessly on mobile while maintaining desktop power and full functionality.</p>
-                            </div>
-                            <div class="screenshot-container" style="max-width: 700px; margin: 0 auto;">
-                                <img src="assets/images/mobile.jpg" alt="Imagor Studio Mobile Interface">
-                            </div>
+            <!-- Slideshow Container -->
+            <div class="slideshow-container" style="flex: 1; max-width: 1000px; position: relative; overflow: hidden;">
+                <!-- Slide Track -->
+                <div class="slideshow-track">
+                    <!-- Clone of last slide (for infinite loop) -->
+                    <div class="slide slide-clone" data-slide="2">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Mobile Experience</h3>
+                            <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Touch-optimized interface that works seamlessly on mobile while maintaining desktop power and full functionality.</p>
                         </div>
-
-                        <!-- Slide 1 -->
-                        <div class="slide" data-slide="0">
-                            <div style="text-align: center; margin-bottom: 1.5rem;">
-                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Lightning-Fast Gallery</h3>
-                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">High-performance virtual scrolling gallery with instant thumbnail generation and smooth navigation through thousands of images.</p>
-                            </div>
-                            <div class="screenshot-container">
-                                <img src="assets/images/gallery.jpg" alt="Imagor Studio Gallery Interface">
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="slide" data-slide="1">
-                            <div style="text-align: center; margin-bottom: 1.5rem;">
-                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Professional Live Editing</h3>
-                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Advanced image editing with real-time preview, color adjustments, effects, cropping, and instant URL generation for transformed images.</p>
-                            </div>
-                            <div class="screenshot-container">
-                                <img src="assets/images/editor.jpg" alt="Imagor Studio Live Editor Interface">
-                            </div>
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="slide" data-slide="2">
-                            <div style="text-align: center; margin-bottom: 1.5rem;">
-                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Mobile Experience</h3>
-                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Touch-optimized interface that works seamlessly on mobile while maintaining desktop power and full functionality.</p>
-                            </div>
-                            <div class="screenshot-container" style="max-width: 700px; margin: 0 auto;">
-                                <img src="assets/images/mobile.jpg" alt="Imagor Studio Mobile Interface">
-                            </div>
-                        </div>
-
-                        <!-- Clone of first slide (for infinite loop) -->
-                        <div class="slide slide-clone" data-slide="0">
-                            <div style="text-align: center; margin-bottom: 1.5rem;">
-                                <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Lightning-Fast Gallery</h3>
-                                <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">High-performance virtual scrolling gallery with instant thumbnail generation and smooth navigation through thousands of images.</p>
-                            </div>
-                            <div class="screenshot-container">
-                                <img src="assets/images/gallery.jpg" alt="Imagor Studio Gallery Interface">
-                            </div>
+                        <div class="screenshot-container" style="max-width: 700px; margin: 0 auto;">
+                            <img src="assets/images/mobile.jpg" alt="Imagor Studio Mobile Interface">
                         </div>
                     </div>
 
-                    <!-- Navigation dots -->
-                    <div class="slideshow-dots-wrapper">
-                        <button class="mobile-arrow mobile-arrow-left" data-direction="prev">
-                            <i data-lucide="chevron-left"></i>
-                        </button>
-                        <div class="slideshow-dots">
-                            <span class="dot active" data-slide="0"></span>
-                            <span class="dot" data-slide="1"></span>
-                            <span class="dot" data-slide="2"></span>
+                    <!-- Slide 1 -->
+                    <div class="slide" data-slide="0">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Lightning-Fast Gallery</h3>
+                            <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">High-performance virtual scrolling gallery with instant thumbnail generation and smooth navigation through thousands of images.</p>
                         </div>
-                        <button class="mobile-arrow mobile-arrow-right" data-direction="next">
-                            <i data-lucide="chevron-right"></i>
-                        </button>
+                        <div class="screenshot-container">
+                            <img src="assets/images/gallery.jpg" alt="Imagor Studio Gallery Interface">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide" data-slide="1">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Professional Live Editing</h3>
+                            <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Advanced image editing with real-time preview, color adjustments, effects, cropping, and instant URL generation for transformed images.</p>
+                        </div>
+                        <div class="screenshot-container">
+                            <img src="assets/images/editor.jpg" alt="Imagor Studio Live Editor Interface">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide" data-slide="2">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Mobile Experience</h3>
+                            <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">Touch-optimized interface that works seamlessly on mobile while maintaining desktop power and full functionality.</p>
+                        </div>
+                        <div class="screenshot-container" style="max-width: 700px; margin: 0 auto;">
+                            <img src="assets/images/mobile.jpg" alt="Imagor Studio Mobile Interface">
+                        </div>
+                    </div>
+
+                    <!-- Clone of first slide (for infinite loop) -->
+                    <div class="slide slide-clone" data-slide="0">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem; color: hsl(var(--foreground));">Lightning-Fast Gallery</h3>
+                            <p style="color: hsl(var(--muted-foreground)); max-width: 600px; margin: 0 auto;">High-performance virtual scrolling gallery with instant thumbnail generation and smooth navigation through thousands of images.</p>
+                        </div>
+                        <div class="screenshot-container">
+                            <img src="assets/images/gallery.jpg" alt="Imagor Studio Gallery Interface">
+                        </div>
                     </div>
                 </div>
 
-                <!-- Right Arrow -->
-                <button class="slideshow-arrow slideshow-arrow-right" data-direction="next">
-                    <i data-lucide="chevron-right"></i>
-                </button>
+                <!-- Navigation dots -->
+                <div class="slideshow-dots-wrapper">
+                    <button class="mobile-arrow mobile-arrow-left" data-direction="prev">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <div class="slideshow-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="mobile-arrow mobile-arrow-right" data-direction="next">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
             </div>
+
+            <!-- Right Arrow -->
+            <button class="slideshow-arrow slideshow-arrow-right" data-direction="next">
+                <i data-lucide="chevron-right"></i>
+            </button>
         </div>
     </section>
 
