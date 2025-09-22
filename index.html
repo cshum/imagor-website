@@ -82,7 +82,7 @@
                 </div>
                 <div class="hero-buttons">
                     <a href="buy/early-bird/" class="btn btn-accent btn-large">Support Development - $39</a>
-                    <a href="https://github.com/cshum/imagor-studio" class="btn btn-secondary btn-large">View on GitHub</a>
+                    <a href="#quick-start" class="btn btn-secondary btn-large">Quick Start</a>
                 </div>
             </div>
         </div>
@@ -176,6 +176,69 @@
             <button class="slideshow-arrow slideshow-arrow-right" data-direction="next">
                 <i data-lucide="chevron-right"></i>
             </button>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section id="quick-start" class="section" style="background: hsl(var(--background)); padding: 3rem 0;">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h3>Quick Start</h3>
+                <p class="text-large">Get started with Imagor Studio using Docker</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- Docker Command -->
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: hsl(var(--foreground));">Run with SQLite database and your image directory mounted</h4>
+                    <p style="margin-bottom: 1rem; color: hsl(var(--muted-foreground));">You can replace <code>~/Pictures</code> with the path to your preferred directory (e.g., <code>~/Desktop</code>, <code>~/MyPhotos</code>, <code>~/Downloads</code>).</p>
+
+                    <div style="background: hsl(var(--muted)); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; position: relative; overflow-x: auto;">
+                        <pre style="margin: 0; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 14px; line-height: 1.5; color: hsl(var(--foreground)); white-space: pre-wrap;"><code>docker run -p 8000:8000 --rm \
+  --name imagor-studio \
+  -v $(pwd)/imagor-studio-data:/app/data \
+  -v ~/Pictures:/app/gallery:ro \
+  -e DATABASE_URL="sqlite:///app/data/imagor-studio.db" \
+  shumc/imagor-studio</code></pre>
+                    </div>
+                </div>
+
+                <!-- Browser Access -->
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: hsl(var(--foreground));">Open in browser</h4>
+                    <div style="background: hsl(var(--muted)); border-radius: 8px; padding: 1.5rem; text-align: center;">
+                        <a href="http://localhost:8000" target="_blank" style="font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 16px; color: hsl(var(--primary)); text-decoration: none; font-weight: 500;">http://localhost:8000</a>
+                    </div>
+                </div>
+
+                <!-- What this does -->
+                <div style="margin-bottom: 3rem;">
+                    <h4 style="margin-bottom: 1.5rem; color: hsl(var(--foreground));">What this does:</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="margin: 1rem 0; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i data-lucide="folder" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span>Mounts your Photos directory as read-only for safe access</span>
+                        </li>
+                        <li style="margin: 1rem 0; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i data-lucide="database" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span>Creates persistent storage for the app database (SQLite)</span>
+                        </li>
+                        <li style="margin: 1rem 0; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i data-lucide="settings" style="color: hsl(var(--muted-foreground)); width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0;"></i>
+                            <span>Redirects to admin setup process on first launch</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- GitHub Call-to-Action -->
+                <div style="text-align: center; padding: 2rem; background: hsl(var(--muted) / 0.3); border-radius: 12px; border: 1px solid hsl(var(--border));">
+                    <p style="margin: 0 0 1.5rem; font-size: 18px; font-weight: 500; color: hsl(var(--foreground));">Ready to dive deeper? Check out GitHub</p>
+                    <a href="https://github.com/cshum/imagor-studio" target="_blank" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="github" style="width: 18px; height: 18px;"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -300,7 +363,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>&copy; 2025 Imagor Studio. Built with ❤️ for creators and professionals.</p>
+                <p>&copy; 2025 Adrian Shum. Built with ❤️ for creators and professionals.</p>
             </div>
         </div>
     </footer>
