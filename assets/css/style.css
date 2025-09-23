@@ -254,8 +254,9 @@ p {
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    max-width: 800px;
+    margin: 1.5rem auto 0;
     gap: 1.5rem;
-    margin-top: 1.5rem;
 }
 
 .product-card {
@@ -319,8 +320,9 @@ p {
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 800px;
+    margin: 3rem auto 0;
     gap: 2rem;
-    margin-top: 3rem;
 }
 
 .feature-item {
