@@ -1,6 +1,6 @@
 # Imagor Studio Website
 
-Official website for Imagor Studio - Image gallery and live editing web application, for creators and professionals.
+Official website for Imagor Studio - Image gallery and live editing web application for creators.
 
 ## Website Content
 
@@ -23,4 +23,4 @@ Official website for Imagor Studio - Image gallery and live editing web applicat
 
 ---
 
-Built with ❤️ for creators and professionals.
+Built with ❤️ for creators.
